@@ -9,4 +9,10 @@ public class Iluminacao extends Equipamento{
         this.tipoIlumina = t;
         this.potencia = W;
     }
+
+    @Override
+    public String toString() {
+        return "Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria + " || Disponível: " + disponivel
+                + " || Tipo de iluminação: " + tipoIlumina + " || Potência: " + potencia;
+    }
 }

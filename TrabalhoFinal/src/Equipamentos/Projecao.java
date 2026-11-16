@@ -9,4 +9,10 @@ public class Projecao extends Equipamento{
         this.resolucao = r;
         this.lumens = l;
     }
+
+    @Override
+    public String toString() {
+        return "Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria + " || Disponível: " + disponivel
+                + " || Resolução: " + resolucao + " || Lúmens: " + lumens;
+    }
 }

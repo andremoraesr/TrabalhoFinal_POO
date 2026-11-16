@@ -9,4 +9,10 @@ public class Som extends Equipamento{
         this.potencia = W;
         this.quantCanais = c;
     }
+
+    @Override
+    public String toString() {
+        return "Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria + " || Disponível: " + disponivel
+                + " || Canais de áudio: " + quantCanais + " || Potência: " + potencia;
+    }
 }

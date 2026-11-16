@@ -11,11 +11,4 @@ public class ControleCliente {
         clientes.add(c);
     }
 
-    public boolean vazia() {
-        if(clientes.isEmpty()) {
-            return true;
-        }
-        return false;
-    }
-
 }

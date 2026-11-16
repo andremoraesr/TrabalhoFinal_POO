@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class JanelaCliente {
     JFrame janela = new JFrame("Cadastrar clientes");
@@ -17,12 +16,7 @@ public class JanelaCliente {
     JTextField email = new JTextField(20);
     JPanel painel = new JPanel();
 
-    JFrame telaAnterior;
-    private ControleCliente controller;
-
     public JanelaCliente(JFrame telaAnterior, ControleCliente controller) {
-        this.telaAnterior = telaAnterior;
-        this.controller = controller;
         janela.setSize(1000, 800);
         painel.setLayout(new GridLayout(0, 2, 5, 10));
         painel.add(new JLabel("Nome: "));
@@ -54,7 +48,8 @@ public class JanelaCliente {
         botaoConsultar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new JanelaListarClientes(janela, controller);
+                janela.setVisible(false);
             }
         });
 

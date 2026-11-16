@@ -1,4 +1,4 @@
-package GerenciaCliente;
+package CadastraCliente;
 
 import java.util.ArrayList;
 

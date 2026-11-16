@@ -1,4 +1,4 @@
-package GerenciaCliente;
+package CadastraCliente;
 
 public class Cliente {
     String cpf, telefone, nome, email;

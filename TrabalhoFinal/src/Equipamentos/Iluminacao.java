@@ -1,6 +1,6 @@
 package Equipamentos;
 
-public class Iluminacao extends Equipamento{
+public class Iluminacao extends Equipamento {
     private String tipoIlumina;
     private double potencia;
 
@@ -15,4 +15,11 @@ public class Iluminacao extends Equipamento{
     //getter
     public String getIluminacao() { return this.tipoIlumina; }
     public double getPotencia() { return this.potencia; }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "\nTipo de iluminação: " + tipoIlumina + " || Potência: " + potencia;
+    }
+
 }

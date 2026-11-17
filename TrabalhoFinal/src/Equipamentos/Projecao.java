@@ -10,8 +10,16 @@ public class Projecao extends Equipamento{
         this.lumens = l;
     }
 
+
 //MÉTODOS
     //getters
     public String getResolucao() { return this.resolucao; }
     public double getLumens() { return this.lumens; }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "\nResolução: " + resolucao + " || Lúmens: " + lumens;
+    }
+
 }

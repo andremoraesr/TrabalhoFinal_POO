@@ -10,8 +10,16 @@ public class Som extends Equipamento{
         this.quantCanais = c;
     }
 
+
 //MÉTODOS
     //getters
     public double getPotencia() { return this.potencia; }
     public double getCanais() { return this.quantCanais; }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "\nCanais de áudio: " + quantCanais + " || Potência: " + potencia;
+    }
+
 }

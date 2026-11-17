@@ -20,5 +20,73 @@ public class JanelaEquipamentos {
         janela.setSize(500, 450);
         painel.setLayout(new GridLayout(7, 1 , 10, 10));
         painel.setBorder(BorderFactory.createEmptyBorder(20, 40, 20 ,40));
+
+        painel.add(botaoAddSom);
+        painel.add(botaoAddIluminacao);
+        painel.add(botaoAddProjecao);
+        painel.add(botaoListarCadastrados);
+        painel.add(botaoListarDisponiveis);
+        painel.add(botaoConsultar);
+        painel.add(botaoVoltar);
+
+        janela.add(painel);
+
+        botaoAddSom.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                janela.setVisible(false);
+            }
+        });
+
+        botaoAddIluminacao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                janela.setVisible(false);
+            }
+        });
+
+        botaoAddProjecao.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                janela.setVisible(false);
+            }
+        });
+
+        botaoListarCadastrados.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                janela.setVisible(false);
+            }
+        });
+
+        botaoListarDisponiveis.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                janela.setVisible(false);
+            }
+        });
+
+        botaoConsultar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+            }
+        });
+
+        botaoVoltar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                telaAnterior.setVisible(true);
+                janela.dispose();
+            }
+        });
+
+        janela.setVisible(true);
     }
 }

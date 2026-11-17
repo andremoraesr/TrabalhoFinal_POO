@@ -60,5 +60,7 @@ public class JanelaCliente {
                 janela.dispose();
             }
         });
+
+        janela.setVisible(true);
     }
 }

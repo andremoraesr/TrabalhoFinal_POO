@@ -1,4 +1,6 @@
-package CadastraCliente;
+package ClienteGUI;
+
+import CadastraCliente.*;
 
 import javax.swing.*;
 import java.awt.*;

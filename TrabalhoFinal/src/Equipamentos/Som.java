@@ -9,4 +9,9 @@ public class Som extends Equipamento{
         this.potencia = W;
         this.quantCanais = c;
     }
+
+//MÉTODOS
+    //getters
+    public double getPotencia() { return this.potencia; }
+    public double getCanais() { return this.quantCanais; }
 }

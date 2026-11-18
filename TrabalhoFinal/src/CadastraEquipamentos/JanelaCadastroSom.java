@@ -19,7 +19,7 @@ public class JanelaCadastroSom {
 
     public JanelaCadastroSom(JFrame telaAnterior, ControleEquipamento controller) {
         janela.setSize(500, 450);
-        painel.setLayout(new GridLayout(7, 1 , 10, 10));
+        painel.setLayout(new GridLayout(0, 2 , 10, 10));
         painel.setBorder(BorderFactory.createEmptyBorder(20, 40, 20 ,40));
 
         painel.add(new JLabel("Código do produto: "));                  painel.add(codigoID);
@@ -29,7 +29,7 @@ public class JanelaCadastroSom {
         painel.add(new JLabel("Quantidade de canais de áudio: "));      painel.add(canais);
         painel.add(botaoCadastrar);
         painel.add(botaoVoltar);
-        janela.add(painel);
+        janela.getContentPane().add(painel);
 
         botaoCadastrar.addActionListener(new ActionListener() {
             @Override
@@ -41,6 +41,8 @@ public class JanelaCadastroSom {
                 int q = (int)canais.getValue();
                 Som s = new Som(c, d, v, p, q);
                 controller.addEquipamento(s);
+                codigoID.setValue(0);  descricao.setText("");   diaria.setValue(0);   potencia.setValue(0);   canais.setValue(0);
+                codigoID.requestFocus();
             }
         });
 

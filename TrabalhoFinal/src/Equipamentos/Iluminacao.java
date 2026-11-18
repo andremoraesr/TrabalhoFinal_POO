@@ -12,7 +12,7 @@ public class Iluminacao extends Equipamento{
 
     @Override
     public String toString() {
-        return "Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria + " || Disponível: " + disponivel
-                + " || Tipo de iluminação: " + tipoIlumina + " || Potência: " + potencia;
+        return "Categoria: Iluminação " + " || Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria
+                + " || Disponível: " + disponivel + " || Tipo de iluminação: " + tipoIlumina + " || Potência: " + potencia;
     }
 }

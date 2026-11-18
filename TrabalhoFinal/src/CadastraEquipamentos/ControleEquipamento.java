@@ -9,4 +9,13 @@ public class ControleEquipamento {
     public ArrayList<Equipamento> getEquipamentos() { return equipamentos; }
 
     public void addEquipamento(Equipamento x) { equipamentos.add(x); }
+
+    public String encontraEquipamento(int cod) {
+        for(Equipamento eq:equipamentos) {
+            if(eq.getCodID() == cod) {
+                return eq.toString();
+            }
+        }
+        return null;
+    }
 }

@@ -12,7 +12,7 @@ public class Projecao extends Equipamento{
 
     @Override
     public String toString() {
-        return "Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria + " || Disponível: " + disponivel
-                + " || Resolução: " + resolucao + " || Lúmens: " + lumens;
+        return "Categoria: Projeção" + " || Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria +
+                " || Disponível: " + disponivel + " || Resolução: " + resolucao + " || Lúmens: " + lumens;
     }
 }

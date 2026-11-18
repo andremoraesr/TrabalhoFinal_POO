@@ -12,7 +12,7 @@ public class Som extends Equipamento{
 
     @Override
     public String toString() {
-        return "Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria + " || Disponível: " + disponivel
+        return "Categoria: Som" + " || Produto: " + descricao + " || Código: " + codID + " || Valor da diária:" + diaria + " || Disponível: " + disponivel
                 + " || Canais de áudio: " + quantCanais + " || Potência: " + potencia;
     }
 }

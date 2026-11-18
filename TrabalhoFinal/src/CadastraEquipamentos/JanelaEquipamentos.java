@@ -29,12 +29,12 @@ public class JanelaEquipamentos {
         painel.add(botaoConsultar);
         painel.add(botaoVoltar);
 
-        janela.add(painel);
+        janela.getContentPane().add(painel);
 
         botaoAddSom.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new JanelaCadastroSom(janela, controller);
                 janela.setVisible(false);
             }
         });
@@ -42,7 +42,7 @@ public class JanelaEquipamentos {
         botaoAddIluminacao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new JanelaCadastroIlum(janela, controller);
                 janela.setVisible(false);
             }
         });
@@ -50,7 +50,7 @@ public class JanelaEquipamentos {
         botaoAddProjecao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new JanelaCadastroProj(janela, controller);
                 janela.setVisible(false);
             }
         });
@@ -58,7 +58,7 @@ public class JanelaEquipamentos {
         botaoListarCadastrados.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new JanelaListarEquipamentos(janela, controller);
                 janela.setVisible(false);
             }
         });
@@ -66,7 +66,7 @@ public class JanelaEquipamentos {
         botaoListarDisponiveis.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new JanelaListarDisponiveis(janela, controller);
                 janela.setVisible(false);
             }
         });
@@ -74,8 +74,7 @@ public class JanelaEquipamentos {
         botaoConsultar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
+                new Pop_upConsultar().consultar(controller);
             }
         });
 

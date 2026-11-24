@@ -1,6 +1,9 @@
 package Equipamentos;
 
-public class Iluminacao extends Equipamento {
+public class Iluminacao
+        extends Equipamento
+        implements Locacao
+{
     private String tipoIlumina;
     private double potencia;
 
@@ -20,6 +23,11 @@ public class Iluminacao extends Equipamento {
     public String toString() {
         return super.toString()
                 + "\nTipo de iluminação: " + tipoIlumina + " || Potência: " + potencia;
+    }
+
+    public double valorLocacao(int dia)
+    {
+        return (this.getDiaria() * dia * 1.1);
     }
 
 }

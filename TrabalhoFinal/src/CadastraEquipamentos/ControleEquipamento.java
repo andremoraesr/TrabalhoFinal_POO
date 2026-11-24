@@ -2,35 +2,66 @@ package CadastraEquipamentos;
 
 import Equipamentos.*;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.List;
 
 public class ControleEquipamento {
-    private ArrayList<Som> equipaSom = new ArrayList<>();
-    private ArrayList<Iluminacao> equipaIlumina = new ArrayList<>();
-    private ArrayList<Projecao> equipaProjecao = new ArrayList<>();
+    private ArrayList<Equipamento> equipamento;
 
-    public ArrayList<Som> getEquipaSom() {
-        return equipaSom;
+    //CONSTRUTORES
+    public ControleEquipamento (ArrayList<Equipamento> q)
+    {
+        if (q != null)
+            this.equipamento = q;
+        else
+            this.equipamento = new ArrayList<Equipamento>();
     }
 
-    public ArrayList<Iluminacao> getEquipaIlumina() {
-        return equipaIlumina;
+    public ControleEquipamento() { this(null); }
+
+//MÉTODOS
+    //getters
+    public ArrayList<Equipamento> getEquipamento() {
+        return this.equipamento;
     }
 
-    public ArrayList<Projecao> getEquipaProjecao() {
-        return equipaProjecao;
+    //base
+    public void addEquipamento(Equipamento q) {
+        this.equipamento.add(q);
     }
 
-    public void addSom(Som s) {
-        equipaSom.add(s);
+    public void listarEquipamentos()
+    {
+        System.out.println("EQUIPAMENTOS PARA ALOCAÇÃO");
+        System.out.println("======================================================");
+        for (Equipamento e : this.equipamento)
+            System.out.println(e);
+        System.out.println("======================================================");
     }
 
-    public void addIlumina(Iluminacao i) {
-        equipaIlumina.add(i);
+    public Equipamento consultarEquip(int ID)
+    {
+        for (Equipamento e : this.equipamento)
+            if (e.getCodID() == ID)
+                return e;
+
+
+        return null;
     }
 
-    public void addProjecao(Projecao p) {
-        equipaProjecao.add(p);
+    public void equipDisponivel()
+    {
+        System.out.println("EQUIPAMENTOS DISPONÍVEIS PARA ALOCAÇÃO");
+        System.out.println("======================================================");
+        for (Equipamento e : this.equipamento)
+            if (e.isDisponivel())
+                System.out.println(e);
+        System.out.println("======================================================");
     }
+
+
+
+
 }
 
 

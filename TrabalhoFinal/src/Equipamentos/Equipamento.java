@@ -1,6 +1,6 @@
 package Equipamentos;
 
-public class Equipamento {
+public class Equipamento implements Locacao {
 
     private int codID;
     private String descricao;
@@ -27,10 +27,15 @@ public class Equipamento {
     public void setDisponivel(boolean b) { this.disponivel = b; }
 
     //base
+    public double valorLocacao(int dia)
+    {
+        return this.diaria * dia;
+    }
+
     @Override
     public String toString() {
-        return "Produto: " + this.descricao + " || Código: " + this.codID
-                + "\nValor da diária:" + this.diaria + " || Disponível: " + this.disponivel;
+        return "\nProduto: " + this.descricao + " || Código: " + this.codID
+                + "\nValor da diária: R$" + this.diaria + " || Disponível: " + this.disponivel;
 
     }
 

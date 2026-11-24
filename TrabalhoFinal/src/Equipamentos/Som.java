@@ -1,6 +1,9 @@
 package Equipamentos;
 
-public class Som extends Equipamento{
+public class Som
+        extends Equipamento
+        implements Locacao
+{
     double potencia;
     int quantCanais;
 
@@ -22,4 +25,8 @@ public class Som extends Equipamento{
                 + "\nCanais de áudio: " + quantCanais + " || Potência: " + potencia;
     }
 
+    public double valorLocacao(int dia)
+    {
+        return (this.getDiaria() * dia);
+    }
 }

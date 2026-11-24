@@ -1,6 +1,9 @@
 package Equipamentos;
 
-public class Projecao extends Equipamento{
+public class Projecao
+        extends Equipamento
+        implements Locacao
+{
     private String resolucao;
     private double lumens;
 
@@ -20,6 +23,14 @@ public class Projecao extends Equipamento{
     public String toString() {
         return super.toString()
                 + "\nResolução: " + resolucao + " || Lúmens: " + lumens;
+    }
+
+    public double valorLocacao(int dia)
+    {
+        if (dia >= 5)
+            return (this.getDiaria() * dia * 0.9);
+
+        return (this.getDiaria() * dia);
     }
 
 }

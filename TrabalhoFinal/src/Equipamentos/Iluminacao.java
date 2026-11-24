@@ -2,7 +2,7 @@ package Equipamentos;
 
 public class Iluminacao
         extends Equipamento
-        implements Locacao
+        implements Locavel
 {
     private String tipoIlumina;
     private double potencia;

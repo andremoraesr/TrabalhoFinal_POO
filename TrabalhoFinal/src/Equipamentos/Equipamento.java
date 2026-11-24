@@ -1,6 +1,6 @@
 package Equipamentos;
 
-public class Equipamento implements Locacao {
+public class Equipamento implements Locavel {
 
     private int codID;
     private String descricao;

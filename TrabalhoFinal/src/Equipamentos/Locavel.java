@@ -1,6 +1,6 @@
 package Equipamentos;
 
-public interface Locacao
+public interface Locavel
 {
     public double valorLocacao(int dia);
 }

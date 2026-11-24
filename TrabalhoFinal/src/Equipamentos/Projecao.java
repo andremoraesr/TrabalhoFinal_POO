@@ -2,7 +2,7 @@ package Equipamentos;
 
 public class Projecao
         extends Equipamento
-        implements Locacao
+        implements Locavel
 {
     private String resolucao;
     private double lumens;

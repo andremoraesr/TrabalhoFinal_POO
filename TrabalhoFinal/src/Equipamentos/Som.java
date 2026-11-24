@@ -2,7 +2,7 @@ package Equipamentos;
 
 public class Som
         extends Equipamento
-        implements Locacao
+        implements Locavel
 {
     double potencia;
     int quantCanais;

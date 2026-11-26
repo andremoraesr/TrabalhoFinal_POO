@@ -39,18 +39,7 @@ public class ControleEquipamento {
         System.out.println("======================================================");
     }
 
-    public Equipamento consultarEquip(int ID)
-    {
-        for (Equipamento e : this.equipamento)
-            if (e.getCodID() == ID)
-                return e;
-
-
-        return null;
-    }
-
-    public void equipDisponivel()
-    {
+    public void equipDisponivel() {
         System.out.println("EQUIPAMENTOS DISPONÍVEIS PARA ALOCAÇÃO");
         System.out.println("======================================================");
         for (Equipamento e : this.equipamento)
@@ -59,9 +48,14 @@ public class ControleEquipamento {
         System.out.println("======================================================");
     }
 
-
-
-
+    public String encontraEquipamento(int cod) {
+        for(Equipamento eq:equipamento) {
+            if(eq.getCodID() == cod) {
+                return eq.toString();
+            }
+        }
+        return null;
+    }
 }
 
 
